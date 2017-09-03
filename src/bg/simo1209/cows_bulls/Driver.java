@@ -10,9 +10,10 @@ public class Driver {
             cowsBulls.guess = cowsBulls.inputHandler.receiveInput();
             cowsBulls.print();
             if(cowsBulls.utils.calcMatch(cowsBulls.guess.toCharArray())[0]==digitCount){
-                System.out.println("you wor");
+                System.out.println("you won");
                 break;
             }
+            if (cowsBulls.guess.length() != digitCount) break;
         }
     }
 }

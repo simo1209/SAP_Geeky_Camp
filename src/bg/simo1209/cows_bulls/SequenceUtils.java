@@ -1,8 +1,28 @@
 package bg.simo1209.cows_bulls;
 
-public interface SequenceUtils {
-    void init();
+import java.util.Arrays;
 
-    int[] calcMatch(char[] guess);
+public abstract class SequenceUtils {
+
+    char[] number;
+
+    abstract void init();
+
+    int[] calcMatch(char[] guess) {
+        int[] result = new int[2];
+        Arrays.fill(result, 0);
+        for (int i = 0; i < guess.length; i++) {
+            for (int j = 0; j < this.number.length; j++) {
+                if (guess[i] == this.number[j]) {
+                    if (i == j) {
+                        result[0]++;
+                    } else {
+                        result[1]++;
+                    }
+                }
+            }
+        }
+        return result;
+    }
 
 }
