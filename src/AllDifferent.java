@@ -11,7 +11,7 @@ public class AllDifferent {
     public static boolean allDifferent(String s){
         char[] chars = s.toCharArray();
         Arrays.sort(chars);
-        for (int i = 0; i < chars.length - 1; i++) {
+        for (int i = 0; i < chars.length - 1; ++i) {
             if (chars[i]==chars[i+1]) return false;
         }
         return true;

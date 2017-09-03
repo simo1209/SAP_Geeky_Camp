@@ -8,11 +8,14 @@ public class SequenceMax {
     public static int sequenceMax(String s){
         char[] chars = s.toCharArray();
         int max = 0;
-        for (int i = 0; i < chars.length; i++) {
-            int j = 0;
+        for (int i = 0; i < chars.length; ++i) {
             int index = 0;
-            while(chars[i]==chars[j++]){
-                index++;
+            for (int k = i; k < chars.length; k++) {
+                if (chars[i]==chars[k]){
+                    ++index;
+                }else{
+                    break;
+                }
             }
             if (index>max){
                 max=index;
