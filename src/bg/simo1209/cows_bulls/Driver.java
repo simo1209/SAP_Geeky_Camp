@@ -6,10 +6,9 @@ public class Driver {
         CowsBulls cowsBulls = new CowsBulls(new ConsoleInput(),new NumberUtils(digitCount),new ConsoleOutput());
         cowsBulls.print();
         while (true){
-
             cowsBulls.guess = cowsBulls.inputHandler.receiveInput();
             cowsBulls.print();
-            if(cowsBulls.utils.calcMatch(cowsBulls.guess.toCharArray())[0]==digitCount){
+            if(cowsBulls.utils.calcMatch(cowsBulls.guess.toCharArray()).getBulls()==digitCount){
                 System.out.println("you won");
                 break;
             }

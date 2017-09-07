@@ -8,21 +8,25 @@ public abstract class SequenceUtils {
 
     abstract void init();
 
-    int[] calcMatch(char[] guess) {
-        int[] result = new int[2];
-        Arrays.fill(result, 0);
+    private static AnimalCounter counter = new AnimalCounter();
+
+    AnimalCounter calcMatch(char[] guess) {
+//        int[] result = new int[2];
+//        Arrays.fill(result, 0);
+
+
         for (int i = 0; i < guess.length; i++) {
             for (int j = 0; j < this.number.length; j++) {
                 if (guess[i] == this.number[j]) {
                     if (i == j) {
-                        result[0]++;
+                        counter.increaseBulls(1);
                     } else {
-                        result[1]++;
+                        counter.increaseCows(1);
                     }
                 }
             }
         }
-        return result;
+        return counter;
     }
 
 }

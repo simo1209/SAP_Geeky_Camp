@@ -1,6 +1,6 @@
 package bg.simo1209.cows_bulls;
 
-public class CowsBulls implements Game{
+public class CowsBulls{
     InputHandler inputHandler;
     String guess;
 
@@ -17,8 +17,6 @@ public class CowsBulls implements Game{
 
     }
 
-
-    @Override
     public void print() {
         System.out.println(outputHandler.printMatch(guess.toCharArray(),utils.calcMatch(guess.toCharArray())));
     }
