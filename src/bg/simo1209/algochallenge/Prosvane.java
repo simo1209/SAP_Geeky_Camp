@@ -29,8 +29,7 @@ public class Prosvane {
 //                while(k>0){
                     if(heights[j-i-1]>heights[i] || heights[j-i-1]>j)result++;
 //                    break;
-//                }
-//                if(j-i-1==0){result++;System.out.println();continue;}
+//                }//                if(j-i-1==0){result++;System.out.println();continue;}
 
 //                if (increase)result++;
 
